@@ -30,10 +30,11 @@ export default function Contact() {
       setStatus('success')
       setForm({ name: '', email: '', type: '', message: '' })
       setTimeout(() => setStatus('idle'), 4000)
-    } catch {
-      setStatus('error')
-      setTimeout(() => setStatus('idle'), 4000)
-    }
+    } catch (err) {
+        console.log('EmailJS error:', err)
+        setStatus('error')
+        setTimeout(() => setStatus('idle'), 4000)
+      }
   }
 
   const inputStyle: React.CSSProperties = {
