@@ -24,7 +24,7 @@ export default function Navbar() {
       display: 'flex', justifyContent: 'space-between', alignItems: 'center',
     }}>
       <div style={{ fontWeight: 700, fontSize: '18px', letterSpacing: '-0.02em', color: 'var(--navy)' }}>
-        SB<span style={{ color: 'var(--accent)' }}>.</span>
+        WIDYO BUMI<span style={{ color: 'var(--accent)' }}>.</span>
       </div>
 
       <div style={{ display: 'flex', gap: '32px', alignItems: 'center' }}>
