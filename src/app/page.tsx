@@ -10,6 +10,10 @@ import Contact from '@/components/Contact'
 
 const ParticleCanvas = dynamic(() => import('@/components/ParticleCanvas'), { ssr: false })
 
+const Divider = () => (
+  <div style={{ width: '100%', height: '1px', background: 'linear-gradient(to right, transparent, rgba(196,168,130,0.3), transparent)' }} />
+)
+
 export default function Home() {
   return (
     <>
@@ -19,25 +23,34 @@ export default function Home() {
           <ParticleCanvas />
           <Hero />
         </div>
+        <Divider />
         <About />
+        <Divider />
         <Projects />
+        <Divider />
         <Testimonials />
+        <Divider />
         <Contact />
       </main>
       <footer style={{
         background: 'var(--navy)', borderTop: '1px solid rgba(245,240,232,0.08)',
-        padding: '32px 48px', display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+        padding: '28px 48px', display: 'flex', justifyContent: 'space-between', alignItems: 'center',
       }}>
-        <p style={{ fontSize: '13px', color: 'rgba(245,240,232,0.4)', fontWeight: 400 }}>
-          © 2025 YourName. All rights reserved.
+        <p style={{ fontSize: '13px', color: 'rgba(245,240,232,0.35)' }}>
+          © 2025 S. Widyo Bumi. All rights reserved.
         </p>
         <div style={{ display: 'flex', gap: '24px' }}>
-          {['LinkedIn', 'GitHub', 'Twitter'].map(s => (
-            <a key={s} href="#" style={{ fontSize: '13px', color: 'rgba(245,240,232,0.4)', textDecoration: 'none', transition: 'color 0.2s' }}
+          {[
+            { label: 'LinkedIn', href: 'https://linkedin.com/in/widyobumi' },
+            { label: 'GitHub', href: 'https://github.com/vanbumi' },
+            { label: 'Email', href: 'mailto:jsp.dio@gmail.com' },
+          ].map(s => (
+            <a key={s.label} href={s.href} target="_blank" rel="noreferrer"
+              style={{ fontSize: '13px', color: 'rgba(245,240,232,0.35)', textDecoration: 'none', transition: 'color 0.2s' }}
               onMouseEnter={e => (e.currentTarget.style.color = 'var(--cream)')}
-              onMouseLeave={e => (e.currentTarget.style.color = 'rgba(245,240,232,0.4)')}
+              onMouseLeave={e => (e.currentTarget.style.color = 'rgba(245,240,232,0.35)')}
             >
-              {s}
+              {s.label}
             </a>
           ))}
         </div>

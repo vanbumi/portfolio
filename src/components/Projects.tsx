@@ -3,24 +3,45 @@
 const projects = [
   {
     num: '01',
-    title: 'AI Trading Dashboard',
-    desc: 'Real-time algorithmic trading platform with ML-powered signal generation and risk management system.',
-    tags: ['Python', 'Next.js', 'AI/ML'],
-    color: '#1a2d45',
+    title: 'Crypto Portfolio Tracker',
+    desc: 'Real-time crypto tracking app with live price updates, portfolio valuation, and interactive charts.',
+    tags: ['Next.js 14', 'TypeScript', 'Chart.js', 'Zustand', 'Tailwind'],
   },
   {
     num: '02',
-    title: 'DeFi Analytics Platform',
-    desc: 'On-chain data analytics tracking liquidity pools and yield farming opportunities across multiple chains.',
-    tags: ['Blockchain', 'Web3.js', 'React'],
-    color: '#1a2d45',
+    title: 'QR Menu App',
+    desc: 'Digital restaurant menu system via QR code — mobile-first, real-time updates, easy management.',
+    tags: ['Next.js', 'TypeScript', 'Tailwind CSS'],
   },
   {
     num: '03',
-    title: 'Enterprise Data Suite',
-    desc: 'End-to-end business intelligence platform with predictive analytics and automated reporting workflows.',
-    tags: ['Data Analytics', 'Python', 'SQL'],
-    color: '#1a2d45',
+    title: 'BI & Data Automation Pipeline',
+    desc: 'End-to-end business intelligence pipeline with automated data processing and visualization reports.',
+    tags: ['Python', 'Pandas', 'NumPy', 'Matplotlib'],
+  },
+  {
+    num: '04',
+    title: 'Leviathan Forge — Prompt AI Generator',
+    desc: 'AI prompt engineering tool that generates optimized prompts for various AI models and use cases.',
+    tags: ['Next.js', 'React', 'TypeScript', 'JavaScript'],
+  },
+  {
+    num: '05',
+    title: 'Forex Replay Chart Backtesting',
+    desc: 'Backtesting platform to replay historical forex chart data for strategy validation and analysis.',
+    tags: ['Python', 'TradingView API'],
+  },
+  {
+    num: '06',
+    title: 'Forex & Crypto Analysis Tool',
+    desc: 'Technical analysis dashboard integrating TradingView API for real-time market signals and alerts.',
+    tags: ['Python', 'TradingView API'],
+  },
+  {
+    num: '07',
+    title: 'Financial Analyst & Automation Hub',
+    desc: 'Comprehensive financial automation platform combining analytics, reporting, and workflow automation.',
+    tags: ['Next.js', 'Tailwind CSS'],
   },
 ]
 
@@ -30,17 +51,17 @@ export default function Projects() {
       <div style={{ fontSize: '12px', fontWeight: 600, letterSpacing: '0.15em', color: 'var(--accent)', textTransform: 'uppercase', marginBottom: '20px' }}>
         Selected Work
       </div>
-      <h2 style={{ fontSize: 'clamp(32px, 4vw, 52px)', fontWeight: 700, color: 'var(--navy)', letterSpacing: '-0.02em', marginBottom: '56px', lineHeight: 1.1 }}>
+      <h2 style={{ fontSize: 'clamp(28px, 4vw, 48px)', fontWeight: 700, color: 'var(--navy)', letterSpacing: '-0.02em', marginBottom: '52px', lineHeight: 1.1 }}>
         Projects that matter.
       </h2>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }}>
         {projects.map(p => (
           <div
             key={p.num}
             style={{
               background: 'var(--white)', borderRadius: '12px',
-              padding: '36px 32px', border: '1px solid var(--border)',
+              padding: '28px 24px', border: '1px solid var(--border)',
               transition: 'transform 0.2s, box-shadow 0.2s', cursor: 'default',
             }}
             onMouseEnter={e => {
@@ -52,15 +73,15 @@ export default function Projects() {
               e.currentTarget.style.boxShadow = 'none'
             }}
           >
-            <div style={{ fontSize: '12px', fontWeight: 600, color: 'var(--accent)', marginBottom: '20px' }}>{p.num}</div>
-            <h3 style={{ fontSize: '20px', fontWeight: 700, color: 'var(--navy)', marginBottom: '12px', letterSpacing: '-0.01em' }}>{p.title}</h3>
-            <p style={{ fontSize: '14px', color: 'var(--muted)', lineHeight: 1.7, marginBottom: '28px' }}>{p.desc}</p>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+            <div style={{ fontSize: '11px', fontWeight: 600, color: 'var(--accent)', marginBottom: '14px' }}>{p.num}</div>
+            <h3 style={{ fontSize: '16px', fontWeight: 700, color: 'var(--navy)', marginBottom: '10px', letterSpacing: '-0.01em', lineHeight: 1.3 }}>{p.title}</h3>
+            <p style={{ fontSize: '13px', color: 'var(--muted)', lineHeight: 1.7, marginBottom: '20px' }}>{p.desc}</p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
               {p.tags.map(t => (
                 <span key={t} style={{
-                  fontSize: '12px', fontWeight: 500,
-                  color: 'var(--navy)', background: 'var(--cream-dark)',
-                  padding: '4px 12px', borderRadius: '100px',
+                  fontSize: '11px', fontWeight: 500,
+                  color: 'var(--navy-mid)', background: 'var(--cream-dark)',
+                  padding: '3px 10px', borderRadius: '100px',
                   border: '1px solid var(--border)',
                 }}>{t}</span>
               ))}
