@@ -27,3 +27,20 @@ body {
   font-family: 'Plus Jakarta Sans', sans-serif;
   overflow-x: hidden;
 }
+
+/* Mobile navbar */
+@media (max-width: 640px) {
+  nav { padding: 14px 20px !important; }
+  nav > div:nth-child(2) { display: none !important; }
+}
+
+/* Mobile contact */
+@media (max-width: 640px) {
+  #contact > div { padding: 0 !important; }
+  #contact .grid { grid-template-columns: 1fr !important; }
+}
+
+/* Mobile footer */
+@media (max-width: 640px) {
+  footer { flex-direction: column !important; gap: 12px !important; text-align: center !important; padding: 24px 20px !important; }
+}
