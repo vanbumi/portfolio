@@ -19,7 +19,7 @@ export default function About() {
         {/* Left */}
         <div>
           <h2 style={{ fontSize: 'clamp(24px, 4vw, 44px)', fontWeight: 700, color: 'var(--cream)', lineHeight: 1.1, letterSpacing: '-0.02em', marginBottom: '20px' }}>
-            Full-Stack Developer &<br />Automation Specialist.
+            Full-Stack Developer &<br />Automation Engineer.
           </h2>
           <p style={{ fontSize: '15px', fontWeight: 300, lineHeight: 1.8, color: 'rgba(245,240,232,0.6)', marginBottom: '14px' }}>
             With 5+ years of experience, I build scalable web applications and efficient automation tools. Proficient in Python, Next.js, TypeScript, and Tailwind CSS.
