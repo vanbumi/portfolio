@@ -112,7 +112,7 @@ export default function Hero() {
             display: 'flex', gap: '32px', flexWrap: 'wrap',
             paddingTop: '28px', borderTop: '1px solid var(--border)',
           }}>
-            {[['7+', 'Projects'], ['5+', 'Years Exp.'], ['100%', 'Satisfaction']].map(([n, l]) => (
+            {[['11+', 'Projects'], ['5+', 'Years Exp.'], ['100%', 'Satisfaction']].map(([n, l]) => (
               <div key={l}>
                 <div style={{ fontSize: '26px', fontWeight: 700, color: 'var(--navy)', letterSpacing: '-0.02em' }}>{n}</div>
                 <div style={{ fontSize: '12px', color: 'var(--muted)', marginTop: '2px' }}>{l}</div>
