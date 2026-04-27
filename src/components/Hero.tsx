@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { projects } from '@/data/projects'
 
 const skills = [
   'Next.js & TypeScript', 'Python Automation', 'Blockchain & DeFi',
@@ -23,19 +24,21 @@ export default function Hero() {
         className="hero-inner"
       >
         {/* Profile photo — mobile: center top */}
-        <div style={{ display: 'flex', justifyContent: 'center' }} className="hero-photo">
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start' }} className="hero-photo">
           <div style={{
-            width: '140px', height: '175px',
-            borderRadius: '16px', overflow: 'hidden',
-            border: '3px solid var(--border)',
+            width: '160px', height: '160px',
+            borderRadius: '50%', overflow: 'hidden',
+            border: '4px solid var(--white)',
+            boxShadow: '0 0 0 3px var(--accent), 0 20px 60px rgba(15,28,46,0.15)',
+            flexShrink: 0,
           }}>
             <Image
               src="/profile.jpg"
               alt="S. Widyo Bumi"
-              width={220}
-              height={280}
+              width={320}
+              height={320}
               priority
-              style={{ objectFit: 'cover', objectPosition: 'top', width: '100%', height: '100%' }}
+              style={{ objectFit: 'cover', objectPosition: 'top center', width: '100%', height: '100%' }}
             />
           </div>
         </div>
@@ -112,7 +115,7 @@ export default function Hero() {
             display: 'flex', gap: '32px', flexWrap: 'wrap',
             paddingTop: '28px', borderTop: '1px solid var(--border)',
           }}>
-            {[['11+', 'Projects'], ['5+', 'Years Exp.'], ['100%', 'Satisfaction']].map(([n, l]) => (
+            {[[`${projects.length}+`, 'Projects'], ['5+', 'Years Exp.'], ['100%', 'Satisfaction']].map(([n, l]) => (
               <div key={l}>
                 <div style={{ fontSize: '26px', fontWeight: 700, color: 'var(--navy)', letterSpacing: '-0.02em' }}>{n}</div>
                 <div style={{ fontSize: '12px', color: 'var(--muted)', marginTop: '2px' }}>{l}</div>
@@ -126,16 +129,18 @@ export default function Hero() {
         @media (min-width: 768px) {
           .hero-inner {
             flex-direction: row !important;
-            align-items: center !important;
+            align-items: flex-start !important;
             justify-content: space-between !important;
+            gap: 60px !important;
           }
           .hero-photo {
             order: 2;
             flex-shrink: 0;
+            padding-top: 8px;
           }
           .hero-photo > div {
             width: 220px !important;
-            height: 280px !important;
+            height: 220px !important;
           }
           .hero-inner > div:last-child {
             order: 1;
