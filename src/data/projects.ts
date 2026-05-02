@@ -3,6 +3,20 @@
 
 export const projects = [
   {
+    title: 'Upwork Portfolio — Refactor Digitalism',
+    desc: 'High-converting landing page service built with Next.js 15 & Tailwind CSS. Features SEO optimization, social media automation, multi-platform auto-posting, and flexible pricing tiers for businesses worldwide.',
+    tags: ['Next.js 15', 'Tailwind CSS', 'TypeScript', 'SEO', 'Social Automation'],
+    live: 'https://upwork-portfolio-two.vercel.app/',
+    github: 'https://github.com/vanbumi/upwork-portfolio',
+  },
+  {
+    title: 'OmniBrain Solutions',
+    desc: 'AI-powered Business Intelligence & Supply Chain platform that aggregates supplier data, automates vendor vetting, and delivers real-time procurement intelligence reports to help enterprises make smarter sourcing decisions.',
+    tags: ['AI', 'Next.js', 'Business Intelligence', 'Supply Chain', 'Automation'],
+    live: 'https://omni-brain-six.vercel.app/',
+    github: null,
+  },
+  {
     title: 'AI Construction Solutions',
     desc: 'AI-powered platform designed to automate construction workflows — helping companies save time, reduce costs, and improve operational efficiency through intelligent automation.',
     tags: ['AI', 'Automation', 'Next.js', 'TypeScript'],
