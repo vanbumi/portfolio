@@ -3,6 +3,41 @@
 
 export const projects = [
   {
+    title: 'WargaConnect — RT/RW Digital',
+    desc: 'Modern neighborhood management app (RT/RW) that digitizes resident data, online letter requests, digital dues payment, and community announcements — making local governance simple and efficient.',
+    tags: ['Next.js', 'TypeScript', 'Community App', 'SaaS'],
+    live: 'https://wargaconnect.revaktor.com/',
+    github: null,
+  },
+  {
+    title: 'Revaktor — Autonomous Digital Ecosystem',
+    desc: 'An autonomous digital ecosystem that revolves ideas into products, brands, and solutions. Umbrella platform housing WargaConnect, OmniBrain, AI Construction, and other sub-products built by S. Widyo Bumi.',
+    tags: ['Next.js', 'TypeScript', 'Ecosystem', 'Multi-Product'],
+    live: 'https://revaktor.com/',
+    github: null,
+  },
+  {
+    title: 'PlastikPro ERP — Plastic Factory Management',
+    desc: 'Modern ERP system for plastic manufacturing plants in Indonesia. Manages production, raw material inventory, active orders, machine status, and weekly production targets in one integrated dashboard.',
+    tags: ['Next.js', 'TypeScript', 'ERP', 'Manufacturing', 'Dashboard'],
+    live: 'https://factory-app-xi.vercel.app/',
+    github: null,
+  },
+  {
+    title: 'BookDent — Dental Clinic Booking SaaS',
+    desc: 'SaaS booking platform for dental clinics. Patients can book 24/7 via a shareable link placed on Instagram, TikTok, or Google Maps. Features multi-doctor scheduling, WhatsApp reminders, and a full clinic management dashboard.',
+    tags: ['Next.js', 'SaaS', 'TypeScript', 'Booking System', 'WhatsApp API'],
+    live: 'https://bookdent.vercel.app/',
+    github: null,
+  },
+  {
+    title: 'Smart RPA — Poultry Processing Plant Management',
+    desc: 'Integrated management system for poultry processing plants (RPA). Tracks daily incoming weight, net profit, production yield percentage, warehouse stock, sales, and financial performance in real-time.',
+    tags: ['Next.js', 'TypeScript', 'ERP', 'Dashboard', 'Production'],
+    live: 'https://smart-rpa.vercel.app/',
+    github: null,
+  },
+  {
     title: 'Upwork Portfolio — Refactor Digitalism',
     desc: 'High-converting landing page service built with Next.js 15 & Tailwind CSS. Features SEO optimization, social media automation, multi-platform auto-posting, and flexible pricing tiers for businesses worldwide.',
     tags: ['Next.js 15', 'Tailwind CSS', 'TypeScript', 'SEO', 'Social Automation'],
