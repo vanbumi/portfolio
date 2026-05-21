@@ -3,6 +3,20 @@
 
 export const projects = [
   {
+    title: 'EliteStay — Hotel Membership Platform',
+    desc: 'Luxury hotel membership landing page focused on exclusive rewards, premium stays, member benefits, and seamless booking experience for modern hospitality brands.',
+    tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Hospitality', 'Membership Platform'],
+    live: 'https://hotel-membership.revaktor.com/',
+    github: null,
+  },
+  {
+    title: 'CoffeeMarket — Modern Coffee Mart Shop',
+    desc: 'Stylish and modern coffee shop website designed to showcase menu highlights, cozy atmosphere, featured products, and online reservations with a premium cafe experience.',
+    tags: ['Next.js', 'TypeScript', 'Payment System', 'Landing Page Shop'],
+    live: 'https://coffee.revaktor.com/',
+    github: null,
+  },
+  {
     title: 'WargaConnect — RT/RW Digital',
     desc: 'Modern neighborhood management app (RT/RW) that digitizes resident data, online letter requests, digital dues payment, and community announcements — making local governance simple and efficient.',
     tags: ['Next.js', 'TypeScript', 'Community App', 'SaaS'],
