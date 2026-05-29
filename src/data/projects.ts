@@ -3,6 +3,13 @@
 
 export const projects = [
   {
+    title: 'LinkTo — Modern Bio Link & Mini Storefront',
+    desc: 'Modern showcase and e-commerce website designed to increase visual appeal, improve product presentation, and create a smooth mobile-first shopping experience. Perfect for your Instagram, TikTok, Facebook, and social media bio links to attract more customers and boost conversions.',
+    tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Toko Online', 'Bio Link', 'Supabase'],
+    live: 'https://linkto.revaktor.com/',
+    github: null,
+  },
+  {
     title: 'EliteStay — Hotel Membership Platform',
     desc: 'Luxury hotel membership landing page focused on exclusive rewards, premium stays, member benefits, and seamless booking experience for modern hospitality brands.',
     tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Hospitality', 'Membership Platform'],
