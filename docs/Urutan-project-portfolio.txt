@@ -1,0 +1,68 @@
+01
+LinkTo — Modern Bio Link & Mini Storefront
+02
+EliteStay — Hotel Membership Platform
+Luxury hotel membership landing page focused on exclusive rewards, premium stays, member benefits, and seamless booking experience for modern hospitality brands.
+03
+CoffeeMarket — Modern Coffee Mart Shop
+Stylish and modern coffee shop website designed to showcase menu highlights, cozy atmosphere, featured products, and online reservations with a premium cafe experience.
+04
+WargaConnect — RT/RW Digital
+Modern neighborhood management app (RT/RW) that digitizes resident data, online letter requests, digital dues payment, and community announcements — making local governance simple and efficient.
+05
+Revaktor — Autonomous Digital Ecosystem
+An autonomous digital ecosystem that revolves ideas into products, brands, and solutions. Umbrella platform housing WargaConnect, OmniBrain, AI Construction, and other sub-products built by S. Widyo Bumi.
+06
+PlastikPro ERP — Plastic Factory Management
+Modern ERP system for plastic manufacturing plants in Indonesia. Manages production, raw material inventory, active orders, machine status, and weekly production targets in one integrated dashboard.
+07
+BookDent — Dental Clinic Booking SaaS
+SaaS booking platform for dental clinics. Patients can book 24/7 via a shareable link placed on Instagram, TikTok, or Google Maps. Features multi-doctor scheduling, WhatsApp reminders, and a full clinic management dashboard.
+08
+Smart RPA — Poultry Processing Plant Management
+Integrated management system for poultry processing plants (RPA). Tracks daily incoming weight, net profit, production yield percentage, warehouse stock, sales, and financial performance in real-time.
+09
+Upwork Portfolio — Refactor Digitalism
+High-converting landing page service built with Next.js 15 & Tailwind CSS. Features SEO optimization, social media automation, multi-platform auto-posting, and flexible pricing tiers for businesses worldwide.
+10
+OmniBrain Solutions
+AI-powered Business Intelligence & Supply Chain platform that aggregates supplier data, automates vendor vetting, and delivers real-time procurement intelligence reports to help enterprises make smarter sourcing decisions.
+11
+AI Construction Solutions
+AI-powered platform designed to automate construction workflows — helping companies save time, reduce costs, and improve operational efficiency through intelligent automation.
+12
+Lead Generation Pro
+Online lead generation app that scrapes Google Maps data to help clients find targeted consumers and export results directly to Excel.
+13
+AU Workforce Intelligence
+Australian workforce analytics platform providing labor market insights and intelligence reports.
+14
+DochuChat
+Document-based AI chat app — upload your docs and have intelligent conversations with them.
+15
+WriteAI
+AI-powered writing assistant that helps generate, refine, and optimize content with ease.
+16
+Vantage Data Engine
+Powerful data engine for processing, transforming, and analyzing large-scale datasets efficiently.
+17
+Financial Automation Hub
+Comprehensive financial automation platform combining analytics, reporting, and workflows.
+18
+Forex & Crypto Analysis
+Technical analysis dashboard integrating TradingView API for real-time market signals.
+19
+Forex Replay Backtesting
+Backtesting platform to replay historical forex chart data for strategy validation.
+20
+Leviathan Forge — Prompt AI
+AI prompt engineering tool that generates optimized prompts for various AI models.
+21
+BI & Data Automation Pipeline
+End-to-end business intelligence pipeline with automated data processing and visualization.
+22
+QR Menu App
+Digital restaurant menu system via QR code — mobile-first, real-time updates, easy management.
+23
+Crypto Portfolio Tracker
+Real-time crypto tracking app with live price updates, portfolio valuation, and interactive charts.

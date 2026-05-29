@@ -1,5 +1,6 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import dynamic from 'next/dynamic'
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
@@ -14,7 +15,40 @@ const Divider = () => (
   <div style={{ width: '100%', height: '1px', background: 'linear-gradient(to right, transparent, rgba(196,168,130,0.3), transparent)' }} />
 )
 
+interface FooterLink {
+  label: string
+  href: string
+}
+
+const STATIC_FOOTER = {
+  copyright: '© 2025 S. Widyo Bumi. All rights reserved.',
+  links: [
+    { label: 'LinkedIn', href: 'https://linkedin.com/in/widyobumi' },
+    { label: 'GitHub', href: 'https://github.com/vanbumi' },
+    { label: 'Email', href: 'mailto:jsp.dio@gmail.com' },
+    { label: 'Dashboard', href: '/dashboard' },
+  ] as FooterLink[],
+}
+
 export default function Home() {
+  const [copyright, setCopyright] = useState(STATIC_FOOTER.copyright)
+  const [footerLinks, setFooterLinks] = useState<FooterLink[]>(STATIC_FOOTER.links)
+
+  useEffect(() => {
+    fetch('/api/site-content?section=footer')
+      .then(r => r.json())
+      .then(data => {
+        if (typeof data.copyright === 'string') setCopyright(data.copyright)
+        if (typeof data.links === 'string') {
+          try {
+            const parsed = JSON.parse(data.links)
+            if (Array.isArray(parsed)) setFooterLinks(parsed)
+          } catch { /* keep static */ }
+        }
+      })
+      .catch(() => {})
+  }, [])
+
   return (
     <>
       <Navbar />
@@ -37,14 +71,10 @@ export default function Home() {
         padding: '28px 48px', display: 'flex', justifyContent: 'space-between', alignItems: 'center',
       }}>
         <p style={{ fontSize: '13px', color: 'rgba(245,240,232,0.35)' }}>
-          © 2025 S. Widyo Bumi. All rights reserved.
+          {copyright}
         </p>
         <div style={{ display: 'flex', gap: '24px' }}>
-          {[
-            { label: 'LinkedIn', href: 'https://linkedin.com/in/widyobumi' },
-            { label: 'GitHub', href: 'https://github.com/vanbumi' },
-            { label: 'Email', href: 'mailto:jsp.dio@gmail.com' },
-          ].map(s => (
+          {footerLinks.map(s => (
             <a key={s.label} href={s.href} target="_blank" rel="noreferrer"
               style={{ fontSize: '13px', color: 'rgba(245,240,232,0.35)', textDecoration: 'none', transition: 'color 0.2s' }}
               onMouseEnter={e => (e.currentTarget.style.color = 'var(--cream)')}

@@ -1,7 +1,16 @@
 'use client'
 
-import { useState } from 'react'
-import { projects } from '@/data/projects'
+import { useState, useEffect } from 'react'
+import { projects as staticProjects } from '@/data/projects'
+
+interface Project {
+  id?: number
+  title: string
+  desc: string
+  tags: string[]
+  live: string | null
+  github: string | null
+}
 
 const PER_PAGE = 9
 
@@ -21,6 +30,17 @@ const ExternalIcon = () => (
 
 export default function Projects() {
   const [page, setPage] = useState(1)
+  const [projects, setProjects] = useState<Project[]>(staticProjects)
+
+  useEffect(() => {
+    let ignore = false
+    fetch('/api/projects').then(r => r.json()).catch(() => [])
+      .then((data) => {
+        if (ignore || !Array.isArray(data) || data.length === 0) return
+        setProjects(data)
+      })
+    return () => { ignore = true }
+  }, [])
 
   const totalPages = Math.ceil(projects.length / PER_PAGE)
   const start = (page - 1) * PER_PAGE

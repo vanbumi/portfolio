@@ -1,15 +1,35 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import emailjs from '@emailjs/browser'
 
-const SERVICE_ID  = 'service_8b664y1'
-const TEMPLATE_ID = 'template_o7h8nks'
-const PUBLIC_KEY  = 'J7h3ENEWcHViRiaMj'
+const STATIC = {
+  title: "Let's build something great.",
+  description: "Have a project in mind? Fill in the form and I'll get back to you within 24 hours.",
+  emailjs_service_id: 'service_8b664y1',
+  emailjs_template_id: 'template_o7h8nks',
+  emailjs_public_key: 'J7h3ENEWcHViRiaMj',
+}
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', type: '', message: '' })
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+  const [content, setContent] = useState(STATIC)
+
+  useEffect(() => {
+    fetch('/api/site-content?section=contact')
+      .then(r => r.json())
+      .then(data => {
+        setContent({
+          title: typeof data.title === 'string' ? data.title : STATIC.title,
+          description: typeof data.description === 'string' ? data.description : STATIC.description,
+          emailjs_service_id: typeof data.emailjs_service_id === 'string' ? data.emailjs_service_id : STATIC.emailjs_service_id,
+          emailjs_template_id: typeof data.emailjs_template_id === 'string' ? data.emailjs_template_id : STATIC.emailjs_template_id,
+          emailjs_public_key: typeof data.emailjs_public_key === 'string' ? data.emailjs_public_key : STATIC.emailjs_public_key,
+        })
+      })
+      .catch(() => {})
+  }, [])
 
   const handleSubmit = async () => {
     if (!form.name || !form.email || !form.message) return
@@ -17,15 +37,15 @@ export default function Contact() {
     setStatus('loading')
     try {
       await emailjs.send(
-        SERVICE_ID,
-        TEMPLATE_ID,
+        content.emailjs_service_id,
+        content.emailjs_template_id,
         {
           from_name:    form.name,
           from_email:   form.email,
           project_type: form.type || 'Not specified',
           message:      form.message,
         },
-        PUBLIC_KEY
+        content.emailjs_public_key
       )
       setStatus('success')
       setForm({ name: '', email: '', type: '', message: '' })
@@ -66,10 +86,10 @@ export default function Contact() {
           Get In Touch
         </div>
         <h2 style={{ fontSize: 'clamp(28px, 4vw, 48px)', fontWeight: 700, color: 'var(--cream)', letterSpacing: '-0.02em', marginBottom: '16px', lineHeight: 1.1 }}>
-          Let&apos;s build something great.
+          {content.title}
         </h2>
         <p style={{ fontSize: '15px', color: 'rgba(245,240,232,0.5)', fontWeight: 300, lineHeight: 1.75, marginBottom: '48px' }}>
-          Have a project in mind? Fill in the form and I&apos;ll get back to you within 24 hours.
+          {content.description}
         </p>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
@@ -125,7 +145,6 @@ export default function Contact() {
             {btnLabel[status]}
           </button>
 
-          {/* Required fields note */}
           <p style={{ fontSize: '12px', color: 'rgba(245,240,232,0.3)', textAlign: 'center', marginTop: '4px' }}>
             Name, email & message are required
           </p>

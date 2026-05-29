@@ -1,5 +1,6 @@
 // ✅ TAMBAH PROJECT BARU DI PALING ATAS ARRAY INI
 // Nomor urut & stats di Hero otomatis terupdate
+// Urutan sesuai docs/Urutan-project-portfolio.txt
 
 export const projects = [
   {
