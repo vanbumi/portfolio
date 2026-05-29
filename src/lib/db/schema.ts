@@ -1,4 +1,4 @@
-import { sqliteTable, text, integer } from 'drizzle-orm/sqlite-core'
+import { sqliteTable, text, integer, unique } from 'drizzle-orm/sqlite-core'
 import { sql } from 'drizzle-orm'
 
 // ─── Projects ──────────────────────────────────────────────
@@ -32,6 +32,6 @@ export const siteContentTable = sqliteTable('site_content', {
   key: text('key').notNull(),           // 'skills' | 'bio' | 'expertise'
   value: text('value').notNull(),       // JSON array or plain text
   updatedAt: text('updated_at').default(sql`(datetime('now'))`),
-}, (t) => ({
-  unq: sql`UNIQUE(${t.section}, ${t.key})`,
-}))
+}, (t) => [
+  unique().on(t.section, t.key),
+])
